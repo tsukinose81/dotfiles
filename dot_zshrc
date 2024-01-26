@@ -99,3 +99,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Aliases
+alias ls="exa -l"
+alias apts="sudo apt install"
+alias aptsyu="sudo apt update && sudo apt upgrade -y"
