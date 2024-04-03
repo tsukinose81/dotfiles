@@ -101,6 +101,28 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Aliases
-alias ls="exa -l"
+alias ls="exa"
 alias apts="sudo apt install"
 alias aptsyu="sudo apt update && sudo apt upgrade -y"
+
+# translate
+alias trans="trans :ja"
+# bat
+alias cat="batcat"
+
+# Go path
+export PATH=$PATH:~/go/bin
+
+export PATH=$PATH:/home/charlie/.local/bin
+# zoxide
+eval "$(zoxide init zsh)"
+
+# pnpm
+export PNPM_HOME="/home/charlie/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+export ANDROID_HOME="$HOME/Android/Sdk"
+export NDK_HOME="$HOME/Android/Sdk/ndk/26.2.11394342"
